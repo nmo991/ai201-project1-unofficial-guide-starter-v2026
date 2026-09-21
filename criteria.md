@@ -23,8 +23,7 @@ For at least 4 of my 5 test questions, the retrieved chunks include one that
 contains the answer.
 
 **Why this target:**
-<!-- e.g. "One of my questions is about a topic only two documents mention, so
-     I expect that one to be hard." -->
+<!-- Even though my questsions are completely within the scope of the corpus's topic, the documents may not cover a certain question since it is too specific. This leaves some leeway.-->
 
 ---
 
@@ -34,7 +33,9 @@ Every answer the system produces names at least one source document.
 
 **Why this target:**
 <!-- Why all five and not four? What about your setup makes that achievable —
-     or what would have to go wrong for it not to be? -->
+     or what would have to go wrong for it not to be? 
+     
+     Unless the question is identified to be out of scope and no answer to the question is given, the system should cite where it got the answer from because it has to use one of the documents.-->
 
 ---
 
@@ -51,47 +52,33 @@ in at least 4 of 5 tries.
 
 **Why this target:**
 <!-- What did your distances look like when you set the cutoff in Milestone 4?
-     Was there a clean gap, or did the two groups overlap? -->
+     Was there a clean gap, or did the two groups overlap? 
+     
+     It ensures the prevention of hallucinations. It is measured by OUT_OF_SCOPE-->
 
 ---
 
 ## 4. Something about your chunks
 
-<!-- YOU WRITE THIS ONE.
-
-     How would you know if your chunks were the right size? Name something
-     countable or observable.
-
-     Examples of the right shape — don't copy these, they should come from
-     what you actually saw in Milestone 3:
-       - "At least 4 of 5 sampled chunks read as a complete thought, with no
-          sentence cut in half at either end."
-       - "No chunk is shorter than 200 characters, since anything below that
-          in my corpus turned out to be a heading with no content under it." -->
+<!-- At least 4 of 5 sampled chunks read as a complete thought (no sentence cut in half at either end)-->
 
 
 
 **Why this target:**
 
-
+<!-- Having whole thoughts increases the chance of a single chunk containing the answer. Not all chunks may be read as full thoughts, but we can ensure a majority. -->
 
 ---
 
 ## 5. Your choice
 
-<!-- YOU WRITE THIS ONE TOO.
-
-     Pick something you actually care about getting right. It could be about
-     speed, about refusals, about a particular kind of question your corpus
-     handles badly, about source attribution being correct rather than merely
-     present — anything, as long as it names a number or an observable
-     outcome. -->
+<!-- For at least 4 of 5 in-scope questions, the generated answer correctly answers the question and the cited source actually contains the supporting text. -->
 
 
 
 **Why this target:**
 
-
+<!-- This ensures retrieval and generation are networked correctly and enforces correct attribution. It can be measured by manually validating answers. -->
 
 ---
 
