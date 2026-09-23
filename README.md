@@ -26,13 +26,14 @@
      this repo.
 
      Milestone 5. -->
+     This system answers questions about a certain campus life environment. Questions regarding specific courses, workloads, dining halls, living halls, etc. The corpus I picked is 'campus_life'.
 
 ## Chunking Strategy
 
 **Chunk size:**
 **Overlap:**
 
-<!-- I kept the starter chunker (fixed character windows) and the default sizes because campus_life is a collection of short posts where most documents are already under 800 characters, so one post usually maps to one coherent chunk. I used the fallback behaviour for Milestone 3 rather than inventing new splitting rules; this preserves the original baseline for comparison. If I later find chunks are too long or fragment thoughts, I'll switch to a paragraph/sentence-aware strategy. -->
+I kept the starter chunker (fixed character windows) and the default sizes because campus_life is a collection of short posts where most documents are already under 800 characters, so one post usually maps to one coherent chunk. I used the fallback behaviour for Milestone 3 rather than inventing new splitting rules; this preserves the original baseline for comparison. If I later find chunks are too long or fragment thoughts, I'll switch to a paragraph/sentence-aware strategy.
 
 ## Sample Chunks
 
@@ -117,10 +118,13 @@ A person can use just this to answer a question as it contains more than enough 
      visible. Milestone 4. -->
 
 **Question:**
-
+What is the schedule for the campus shuttle?
 **Answer:**
 
 ```
+The campus shuttle runs a loop every 20 minutes from 7:00 am to 11:00 pm on weekdays, and every 40 minutes on weekends. 
+
+Source: transit_shuttle.txt
 ```
 
 **My relevance cutoff:**
@@ -153,10 +157,13 @@ How I picked it: I ran retrieval-only checks for the five in-scope and five OUT_
 
      Milestone 5. -->
 
+
+
+
 **1.**
-
+     The corpus I picked only had short sentences that make up one paragraph at most. When writing the starter in chunker, I used AI to use the blueprint I set up to implement the starter. Ignoring the fact that the starter code already present can be used as campus_life's documents don't need any paragraph-based structuring and splitting, it wrote a whole program. I later had to simply use the starter code already present, which was quite suitable for my chosen corpus.
 **2.**
-
+     Another event was its suggestion to use a completely localized code to find out the best scores for the in-scope and out-of-scope question test cases as run_eval was not working due to volume. I had to recheck my API settings and wait temporarily until the system got back up rather than implementing the plan of not using run_eval.
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
      claims earns nothing.
