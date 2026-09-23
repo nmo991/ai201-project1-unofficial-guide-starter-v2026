@@ -135,6 +135,7 @@ How I picked it: I ran retrieval-only checks for the five in-scope and five OUT_
      Milestone 4. -->
 
 | Question | In corpus? | Best distance |
+|---|---|---:|
 | What are the wait times for the Atrium? | yes | 0.324 | 
 | How many hours can I work for on campus? | yes | 0.338 |
 | What is the workload like for linear algebra course?| yes | 0.202 | 
@@ -145,6 +146,7 @@ How I picked it: I ran retrieval-only checks for the five in-scope and five OUT_
 | Who won the 1994 World Cup? | no | 0.886 |
 | What is the recommended dosage of ibuprofen for a headache? | no | 0.844 |
 | How do I write a for loop in Rust? | no | 0.896 |
+
 
 ## How I Used AI
 
@@ -162,6 +164,7 @@ How I picked it: I ran retrieval-only checks for the five in-scope and five OUT_
 
 **1.**
      The corpus I picked only had short sentences that make up one paragraph at most. When writing the starter in chunker, I used AI to use the blueprint I set up to implement the starter. Ignoring the fact that the starter code already present can be used as campus_life's documents don't need any paragraph-based structuring and splitting, it wrote a whole program. I later had to simply use the starter code already present, which was quite suitable for my chosen corpus.
+##
 **2.**
      Another event was its suggestion to use a completely localized code to find out the best scores for the in-scope and out-of-scope question test cases as run_eval was not working due to volume. I had to recheck my API settings and wait temporarily until the system got back up rather than implementing the plan of not using run_eval.
 <!-- ── Stretch features ─────────────────────────────────────────────────────
