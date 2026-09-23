@@ -125,18 +125,22 @@ A person can use just this to answer a question as it contains more than enough 
 
 **My relevance cutoff:**
 
-<!-- The number you set in config.py, and how you got there.
-
-     You ran five questions your corpus covers and the five in OUT_OF_SCOPE
-     that it clearly doesn't, and wrote down the best distance for each. What
-     did those two groups look like? Where was the gap? Put the actual numbers
-     here — the table below wants all ten rows.
+<!-- My relevance cutoff: 0.50
+How I picked it: I ran retrieval-only checks for the five in-scope and five OUT_OF_SCOPE questions (see results/run_retrieval_before.md). The in-scope best distances clustered around 0.20–0.40 and the out-of-scope best distances clustered around 0.82–0.94, so I set the cutoff to 0.50 (in the gap).
 
      Milestone 4. -->
 
 | Question | In corpus? | Best distance |
-|---|---|---|
-|  |  |  |
+| What are the wait times for the Atrium? | yes | 0.324 | 
+| How many hours can I work for on campus? | yes | 0.338 |
+| What is the workload like for linear algebra course?| yes | 0.202 | 
+| How many credit hours do you need to graduate? | yes | 0.300 |
+| What is the schedule for the campus shuttle? | yes | 0.391 | 
+| What is the capital of Mongolia? | no | 0.825 | 
+| How do I change the oil in a diesel engine? | no | 0.934 |
+| Who won the 1994 World Cup? | no | 0.886 |
+| What is the recommended dosage of ibuprofen for a headache? | no | 0.844 |
+| How do I write a for loop in Rust? | no | 0.896 |
 
 ## How I Used AI
 
