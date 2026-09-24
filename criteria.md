@@ -23,7 +23,7 @@ For at least 4 of my 5 test questions, the retrieved chunks include one that
 contains the answer.
 
 **Why this target:**
-<!-- Even though my questsions are completely within the scope of the corpus's topic, the documents may not cover a certain question since it is too specific. This leaves some leeway.-->
+Even though my questsions are completely within the scope of the corpus's topic, the documents may not cover a certain question since it is too specific. This leaves some leeway.
 
 ---
 
@@ -35,8 +35,8 @@ Every answer the system produces names at least one source document.
 <!-- Why all five and not four? What about your setup makes that achievable —
      or what would have to go wrong for it not to be? 
      
-     Unless the question is identified to be out of scope and no answer to the question is given, the system should cite where it got the answer from because it has to use one of the documents.-->
-
+     -->
+Unless the question is identified to be out of scope and no answer to the question is given, the system should cite where it got the answer from because it has to use one of the documents.
 ---
 
 ## 3. The relevance gate stops out-of-corpus questions
@@ -54,25 +54,25 @@ in at least 4 of 5 tries.
 <!-- What did your distances look like when you set the cutoff in Milestone 4?
      Was there a clean gap, or did the two groups overlap? 
      
-     It ensures the prevention of hallucinations. It is measured by OUT_OF_SCOPE-->
-
+    -->
+ It ensures the prevention of hallucinations. It is measured by OUT_OF_SCOPE
 ---
 
 ## 4. Something about your chunks
 
-<!-- At least 4 of 5 sampled chunks read as a complete thought (no sentence cut in half at either end)-->
+At least 4 of 5 sampled chunks read as a complete thought (no sentence cut in half at either end)
 
 
 
 **Why this target:**
 
-<!-- Having whole thoughts increases the chance of a single chunk containing the answer. Not all chunks may be read as full thoughts, but we can ensure a majority. -->
+ Having whole thoughts increases the chance of a single chunk containing the answer. Not all chunks may be read as full thoughts, but we can ensure a majority.
 
 ---
 
 ## 5. Your choice
 
-<!-- For at least 4 of 5 in-scope questions, the generated answer correctly answers the question and the cited source actually contains the supporting text. -->
+ For at least 4 of 5 in-scope questions, the generated answer correctly answers the question and the cited source actually contains the supporting text.
 
 
 
